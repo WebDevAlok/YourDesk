@@ -1,0 +1,14 @@
+pkgname=yourdesk
+pkgver=1.0.0
+pkgrel=1
+pkgdesc="AnyDesk-like Linux remote support toolkit"
+arch=('any')
+license=('MIT')
+depends=('python' 'python-fastapi' 'python-uvicorn' 'python-pydantic' 'x11vnc' 'websockify')
+source=()
+sha256sums=()
+
+package() {
+  install -Dm644 LICENSE "$pkgdir/usr/share/licenses/$pkgname/LICENSE"
+  install -Dm644 README.md "$pkgdir/usr/share/doc/$pkgname/README.md"
+}

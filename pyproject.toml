@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "yourdesk"
+version = "1.0.0"
+description = "AnyDesk-like Linux remote support toolkit"
+requires-python = ">=3.11"
+dependencies = [
+  "fastapi>=0.111.0",
+  "uvicorn>=0.30.0",
+  "pydantic>=2.7.0",
+]
+
+[project.scripts]
+yourdesk = "yourdesk.cli:main"
+
+[tool.setuptools]
+packages = ["yourdesk"]

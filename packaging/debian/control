@@ -1,0 +1,11 @@
+Source: yourdesk
+Section: net
+Priority: optional
+Maintainer: YourDesk Team <support@yourdesk.local>
+Standards-Version: 4.6.2
+
+Package: yourdesk
+Architecture: all
+Depends: python3 (>= 3.11), python3-fastapi, python3-uvicorn, python3-pydantic, x11vnc, websockify
+Description: AnyDesk-like Linux remote support toolkit
+ YourDesk provides broker + host/join CLI tooling for remote desktop support.

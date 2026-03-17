@@ -1,0 +1,14 @@
+[Unit]
+Description=YourDesk Broker Service
+After=network-online.target
+
+[Service]
+Type=simple
+User=yourdesk
+Group=yourdesk
+ExecStart=/usr/bin/yourdesk broker --host 0.0.0.0 --port 8080 --ttl 900
+Restart=on-failure
+RestartSec=2
+
+[Install]
+WantedBy=multi-user.target
