@@ -1,0 +1,13 @@
+[Unit]
+Description=YourDesk Host Agent
+After=network-online.target graphical.target
+
+[Service]
+Type=simple
+User=%i
+ExecStart=/usr/bin/yourdesk host --broker http://broker.example.com:8080 --public-host host.example.com --alias %H
+Restart=always
+RestartSec=2
+
+[Install]
+WantedBy=default.target
